@@ -7,9 +7,6 @@ A ecommerce products management api , get http://ecomapi.crabdance.com/products 
     <li>Mongoose</li>
     <li>ExpressJs</li>
     <li>NodeJs</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
   </ul>
 </p>
 
