@@ -1,5 +1,6 @@
 const Products = require("../model/products");
 
+//function call to list all products
 module.exports.view = async function (req, res) {
   try {
     let products = await Products.find().select(["name", "quantity", "_id"]);
@@ -13,6 +14,7 @@ module.exports.view = async function (req, res) {
   }
 };
 
+//function call to create new products
 module.exports.create = async function (req, res) {
   try {
     let newProduct = await Products.create(req.body);
@@ -31,6 +33,7 @@ module.exports.create = async function (req, res) {
   }
 };
 
+//function call to delete product by id passed as parameter
 module.exports.delete = async function (req, res) {
   try {
     await Products.findByIdAndDelete(req.params.id);
@@ -46,6 +49,7 @@ module.exports.delete = async function (req, res) {
   }
 };
 
+//function call to update product quantity for the product id passed as parameter
 module.exports.update = async function (req, res) {
   try {
     let product = await Products.findByIdAndUpdate(

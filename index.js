@@ -3,8 +3,10 @@ const app = express();
 const port = 8000;
 const db = require("./config/dbconfig");
 
+//for decoding form data
 app.use(express.urlencoded());
 
+//route information
 app.use("/", require("./routes"));
 
 app.listen(port, function (err) {
